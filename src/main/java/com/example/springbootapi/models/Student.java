@@ -9,11 +9,11 @@ public class Student {
 
     private String name;
 
+    private String email;
+    private LocalDate dob;
     private Integer age;
 
-    private LocalDate dob;
 
-    private String email;
 //=======================================  Instance variables end: =====================================================
 
 //=======================================   Constructors start:  =======================================================
@@ -24,24 +24,24 @@ public class Student {
 
     public Student(Long id,
                    String name,
-                   Integer age,
+                   String email,
                    LocalDate dob,
-                   String email) {
+                   Integer age) {
         this.id = id;
         this.name = name;
-        this.age = age;
-        this.dob = dob;
         this.email = email;
+        this.dob = dob;
+        this.age = age;
     }
 
     public Student(String name,
-                   Integer age,
+                   String email,
                    LocalDate dob,
-                   String email) {
+                   Integer age) {
         this.name = name;
-        this.age = age;
-        this.dob = dob;
         this.email = email;
+        this.dob = dob;
+        this.age = age;
 //===============================================  Constructors End ====================================================
     }
 //=============================================== Getters & Setters Start ==============================================
@@ -90,9 +90,11 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", age=" + age +
-                ", dob=" + dob +
                 ", email='" + email + '\'' +
+                ", dob=" + dob +
+                ", age=" + age +
                 '}';
     }
 }
+
+//========================================== Above is toString method ?? ===============================================
